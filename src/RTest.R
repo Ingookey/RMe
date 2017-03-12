@@ -87,3 +87,27 @@ ncol(df)
 df1 <- data.frame(id = c(1, 2, 3, 4), score = c(80, 90, 78, 67))
 df1
 data.matrix(df1) # convert data frame to matrix
+
+# date & time 日期 & 时间
+da <- date() # current date & time
+da # character
+class(da)
+da <- Sys.Date()
+da # Date
+class(da)
+
+da1 <- as.Date("2017-03-12")
+class(da1)
+months(da1)
+weekdays(da1)
+quarters(da1)
+julian(da1) # da1 - 1970-01-01
+
+da2 <- as.Date("2018-03-12")
+das = da2 - da1
+as.numeric(das)
+
+  # time
+
+
+

@@ -51,3 +51,14 @@ data()
 ?setname
 
 ## R语言基础 ##
+
+1.1
+数据结构
+数据操作
+
+2.1
+数据结构
+	5种基本类型：character, numeric, integer, complex, logical
+	x <- 78, class(x), x <- 8L, x <- 8 + 2i, TRUE,FALSE
+	属性
+	name, dimensions, class, length

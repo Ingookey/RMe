@@ -52,3 +52,38 @@ ma
 
 dimnames(ma) <- list(c("row1", "row2"), c("c1", "c2", "c3"))
 ma
+
+
+# factor
+fa <- factor(c("male", "female", "female", "male", "male"))
+fa
+class(fa)
+
+fa1 <- factor(c("male", "female", "female", "male", "male"), levels = c("male", "female"))
+fa1
+table(fa1)
+unclass(fa1)
+
+
+# missing value
+# NA, NaN for integer, NaN belong to NA
+mi <- array(c(1, NA, 2, NA, 3))
+is.na(mi)
+is.nan(mi)
+
+mi <- array(c(1, NaN, 2, NaN, 3))
+is.na(mi)  # whether it's NA
+is.nan(mi) # whether it's NaN
+
+
+# data frame 数据框
+df <- data.frame(id = c(1, 2, 3), name = c("one", "two", "three"), gender = c(TRUE, FALSE, TRUE))
+df
+  # check the row and column of data frame
+nrow(df)
+ncol(df)
+
+  # other eg
+df1 <- data.frame(id = c(1, 2, 3, 4), score = c(80, 90, 78, 67))
+df1
+data.matrix(df1) # convert data frame to matrix

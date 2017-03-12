@@ -106,8 +106,19 @@ julian(da1) # da1 - 1970-01-01
 da2 <- as.Date("2018-03-12")
 das = da2 - da1
 as.numeric(das)
+# how to convert normal date to standard date
+x1 <- "Jan 1, 2015 01:01"
+strptime(x1, "%B %d, %Y %H:$M")
+?strptime
 
   # time
-
-
+ti <- Sys.time()
+class(ti)
+t1 <- as.POSIXlt(ti)
+#t1
+#class(t1)
+names(unclass(t1))
+t1$yday
+as.POSIXct(t1)
+t1
 

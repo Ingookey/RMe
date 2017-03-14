@@ -29,3 +29,23 @@ li <- list(id=1:4, height=170, gender="male")
 li2 <- list(a = list(1, 2, 3, 4), b = c("monday", "tudesday"))
 #li2[[1]][[3]] #li2[[c(1, 3)]] the same way
 
+li3 <- list(abc = 1:10)
+#li3$a #li3$abc    partial matching
+li3[["a", exact = FALSE]] #li3[["abc"]]
+
+
+x[!is.na(x)]
+z <- complete.cases(x, y)
+library(datasets)
+#head(airquality)  # head 6
+g <- complete.cases(airquality)
+g
+airquality[g, ][1:10, ]
+
+
+# vectorized operation
+x <- matrix(1:4, nrow = 2, ncol = 2)
+y <- matrix(rep(2, 4), nrow = 2, ncol = 2)
+x * y
+x %*% y
+
